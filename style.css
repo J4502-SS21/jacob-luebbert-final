@@ -1,17 +1,54 @@
 nav {
   background-color: #296E01;
-  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.nav_logo {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  top: 15px;
+  left: 30px;
 }
 
 nav a {
-  float: right;
   color: white;
+  align-items: center;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   font-size: 20px;
+  padding: 20px;
+  font-family: 'Rubik', sans-serif;
 }
 
 ul {
   list-style-type: none;
+  display: flex;
+  flex-basis: auto;
+  flex-wrap: wrap;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+}
+
+.finishedpcphoto {
+  width: 540px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  font-family: 'Lora', serif;
 }
