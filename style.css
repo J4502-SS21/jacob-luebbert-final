@@ -50,6 +50,11 @@ body {
   text-align: center;
 }
 
+.glossarytitle {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+
 h2 {
   font-family: 'Rubik', sans-serif;
   padding-top: 25px;
@@ -69,7 +74,7 @@ p {
 }
 
 .main-content-flex {
-  display:flex;
+  display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
 }
