@@ -110,6 +110,8 @@ p {
   order: 2;
   flex-basis: 100%;
   text-align: center;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 .main-content-flex-item3 {
