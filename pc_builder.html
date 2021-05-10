@@ -11,6 +11,7 @@
   <meta name="keywords" content="Jacob Luebbert, J4502, PCs, PC building, journalism" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <script src="prices.js"></script>
 </head>
 
 <body>
@@ -56,20 +57,76 @@
     <li class="main-content-flex-item2">
       <h2>Part Name</h2>
       <p>
-        <select name="cpu" id="cpu">
-          <option value="5600x">AMD Ryzen 5 5600X</option>
+        <select name="cpu" id="cpu" onchange="checkPriceCpu()">
+          <option>N/A</option>
+          <option value=262>Intel Core i5-11600K</option>
+          <option value=300>AMD Ryzen 5 5600X</option>
+          <option value=550>AMD Ryzen 9 5900X</option>
         </select>
       </p>
+      <p>
+        <select name="ram" id="ram" onchange="checkPriceRam()">
+          <option>N/A</option>
+          <option value=77>Silicon Power XPOWER Turbine 16 GB DDR4-3200</option>
+          <option value=95>Corsair Vengeance LPX 16 GB DDR4-3600</option>
+          <option value=145>Patriot Viper Steel 16 GB DDR4-4400</option>
+        </select>
+      </p>
+      <p>
+        <select name="gpu" id="gpu" onchange="checkPriceGpu()">
+          <option>N/A</option>
+          <option value=150>Nvidia Geforce GTX 1650</option>
+          <option value=499>Nvidia Geforce RTX 3070</option>
+          <option value=1499>Nvidia GeForce RTX 3090</option>
+        </select>
+      </p>
+      <p>
+        <select name="mobo" id="mobo" onchange="checkPriceMobo()">
+          <option>N/A</option>
+          <option value=105>MSI B460M-A PRO Micro ATX LGA1200</option>
+          <option value=140>MSI B550-A PRO ATX AM4</option>
+          <option value=370>Gigabyte X570 AORUS MASTER ATX AM4</option>
+        </select>
+      </p>
+      <p>
+        <select name="psu" id="psu" onchange="checkPricePsu()">
+          <option>N/A</option>
+          <option value=46>EVGA BQ 500 W</option>
+          <option value=100>EVGA G1+ 750 W</option>
+          <option value=205>Corsair HX Platinum 1000 W</option>
+        </select>
+      </p>
+      <p>
+        <select name="case" id="case" onchange="checkPriceCase()">
+          <option>N/A</option>
+          <option value=120>Lian Li O11 Dynamic Mini</option>
+          <option value=160>Lian Li PC-O11 Dynamic</option>
+        </select>
+      </p>
+      <p>
+        <select name="storage" id="storage" onchange="checkPriceStorage()">
+          <option>N/A</option>
+          <option value=43>Seagate Barracuda 1 TB 3.5" 7200RPM</option>
+          <option value=105>Crucial P1 1 TB M.2-2280 NVME Solid State Drive</option>
+          <option value=110>Samsung 860 Evo 1 TB 2.5" Solid State Drive</option>
+        </select>
+      </p>
+      <button onclick="totalPrice()">Calculate Final Price!</button>
     </li>
     <li class="main-content-flex-item3">
       <h2>Price of Part</h2>
-      <p>
-        $299.99
-      </p>
+      <p id="cpuprice"></p>
+      <p id="ramprice"></p>
+      <p id="gpuprice"></p>
+      <p id="moboprice"></p>
+      <p id="psuprice"></p>
+      <p id="caseprice"></p>
+      <p id="storageprice"></p>
     </li>
     <li class="finalprice">
       <h2>
-        Final Price: $299.99
+        Final Price:
+        <p id="totalprice"></p>
       </h2>
     </li>
   </ul>
